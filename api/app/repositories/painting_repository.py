@@ -34,3 +34,7 @@ class PaintingRepository:
             self.db.delete(painting)
             self.db.commit()
 
+    # 🚀 MÉTODO QUE TE FALTABA
+    def count(self) -> int:
+        """Return total number of rows in paintings table"""
+        return self.db.query(Painting).count()

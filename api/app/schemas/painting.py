@@ -7,11 +7,8 @@ from typing import Optional
 
 class PaintingBase(BaseModel):
     code: Optional[str] = None
-    title: Optional[str] = None
     artist: Optional[str] = None
-    description: Optional[str] = None
     image_url: Optional[str] = None
-    category: Optional[str] = None
 
 
 class PaintingCreate(PaintingBase):

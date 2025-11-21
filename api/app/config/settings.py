@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     db_pool_timeout: int = 30
     
     class Config:
-        env_file = "../.env"
+        env_file = ".env"
         case_sensitive = False
 
 

@@ -6,24 +6,22 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.app.config import settings
 from api.app.database import engine, Base
-from api.app.routers import artworks, paintings, gemini, emotions, health, root, user
-from api.app.models.user import User
+from api.app.routers import paintings, gemini, emotions, root
+import os
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """
     Lifespan context manager for startup and shutdown events
     """
-    # Startup: Create tables and load initial data
     Base.metadata.create_all(bind=engine)
     import api.app.config.data_loader as data_loader
     data_loader.init_data()
     yield
-    # Shutdown: Cleanup if needed
     pass
 
 
-# Create FastAPI app
 app = FastAPI(
     title="SoulTrip Backend API",
     description="FastAPI backend for museum management system",
@@ -31,10 +29,10 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# Configure CORS
+# CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify actual origins
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -43,19 +41,16 @@ app.add_middleware(
 
 # Include routers
 app.include_router(root.router)
-app.include_router(health.router)
-app.include_router(artworks.router)
 app.include_router(paintings.router)
 app.include_router(gemini.router)
 app.include_router(emotions.router)
-app.include_router(user.router)
 
 
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
         "main:app",
-        host="0.0.0.0",  # Cambiado para producción
-        port=int(os.environ.get("PORT", 8000)),  # Usa variable de entorno PORT
-        reload=False  # Desactiva reload en producción
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000)),
+        reload=False
     )
