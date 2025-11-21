@@ -12,5 +12,5 @@ COPY Api-Nueva-main/ ./
 # Exponer puerto
 EXPOSE 8080
 
-# Ejecutar desde el directorio actual
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+# Ejecutar la aplicación
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}"]
