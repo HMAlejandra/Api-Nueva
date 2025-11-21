@@ -3,7 +3,7 @@ User model
 """
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.sql import func
-from app.database import Base
+from api.app.database import Base
 
 
 class User(Base):

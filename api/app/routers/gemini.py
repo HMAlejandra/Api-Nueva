@@ -2,7 +2,7 @@
 Router for Gemini AI operations
 """
 from fastapi import APIRouter, HTTPException, status
-from app.services.gemini_service import GeminiService
+from api.app.services.gemini_service import GeminiService
 
 router = APIRouter(prefix="/api/ia", tags=["ai"])
 

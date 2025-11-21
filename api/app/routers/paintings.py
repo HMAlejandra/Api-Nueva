@@ -4,9 +4,9 @@ Router for painting operations
 from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from app.database import get_db
-from app.schemas.painting import PaintingCreate, PaintingResponse
-from app.services.painting_service import PaintingService
+from api.app.database import get_db
+from api.app.schemas.painting import PaintingCreate, PaintingResponse
+from api.app.services.painting_service import PaintingService
 
 router = APIRouter(prefix="/api/paintings", tags=["paintings"])
 

@@ -3,9 +3,9 @@ Router for emotion-based operations
 """
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
-from app.database import get_db
-from app.schemas.emotion import EmotionRequest, EmotionResponse
-from app.services.emotion_service import EmotionService
+from api.app.database import get_db
+from api.app.schemas.emotion import EmotionRequest, EmotionResponse
+from api.app.services.emotion_service import EmotionService
 
 router = APIRouter(prefix="/api/obra", tags=["obra"])
 

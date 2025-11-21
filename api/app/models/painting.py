@@ -2,7 +2,7 @@
 Painting model - represents a painting entity in the museum system
 """
 from sqlalchemy import Column, Integer, String
-from app.database import Base
+from api.app.database import Base
 
 
 class Painting(Base):

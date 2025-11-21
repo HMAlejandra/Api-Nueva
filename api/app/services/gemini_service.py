@@ -2,7 +2,7 @@
 Service for interacting with Gemini API
 """
 import httpx
-from app.config import settings
+from api.app.config import settings
 
 
 class GeminiService:

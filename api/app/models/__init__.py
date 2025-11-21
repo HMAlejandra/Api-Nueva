@@ -1,8 +1,8 @@
 """
 Database models
 """
-from app.models.artwork import Artwork
-from app.models.painting import Painting
+from api.app.models.artwork import Artwork
+from api.app.models.painting import Painting
 
 __all__ = ["Artwork", "Painting"]
 

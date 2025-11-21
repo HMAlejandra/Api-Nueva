@@ -3,10 +3,10 @@ Service for emotion-based artwork recommendations
 """
 from typing import Optional
 from sqlalchemy.orm import Session
-from app.schemas.emotion import EmotionRequest, EmotionResponse
-from app.repositories.artwork_repository import ArtworkRepository
-from app.services.gemini_service import GeminiService
-from app.config import settings
+from api.app.schemas.emotion import EmotionRequest, EmotionResponse
+from api.app.repositories.artwork_repository import ArtworkRepository
+from api.app.services.gemini_service import GeminiService
+from api.app.config import settings
 
 
 class EmotionService:

@@ -3,7 +3,7 @@ Repository for managing artworks
 """
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from app.models.artwork import Artwork
+from api.app.models.artwork import Artwork
 
 
 class ArtworkRepository:

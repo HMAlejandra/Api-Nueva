@@ -3,9 +3,9 @@ Service layer for managing paintings
 """
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from app.models.painting import Painting
-from app.repositories.painting_repository import PaintingRepository
-from app.schemas.painting import PaintingCreate
+from api.app.models.painting import Painting
+from api.app.repositories.painting_repository import PaintingRepository
+from api.app.schemas.painting import PaintingCreate
 
 
 class PaintingService:

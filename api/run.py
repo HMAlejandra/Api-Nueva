@@ -3,11 +3,11 @@
 Script para ejecutar la aplicación
 """
 import uvicorn
-from app.config import settings
+from api.app.config import settings
 
 if __name__ == "__main__":
     uvicorn.run(
-        "app.main:app",
+        "api.app.main:app",
         host=settings.host,
         port=settings.port,
         reload=True

@@ -3,7 +3,7 @@ Repository for managing paintings
 """
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from app.models.painting import Painting
+from api.app.models.painting import Painting
 
 
 class PaintingRepository:

@@ -2,9 +2,9 @@
 Data loader for initial data seeding
 """
 from sqlalchemy.orm import Session
-from app.database import SessionLocal
-from app.models.artwork import Artwork
-from app.repositories.artwork_repository import ArtworkRepository
+from api.app.database import SessionLocal
+from api.app.models.artwork import Artwork
+from api.app.repositories.artwork_repository import ArtworkRepository
 
 
 def init_data():

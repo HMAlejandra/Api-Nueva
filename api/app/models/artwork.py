@@ -2,7 +2,7 @@
 Artwork model - represents a general artwork entity
 """
 from sqlalchemy import Column, Integer, String
-from app.database import Base
+from api.app.database import Base
 
 
 class Artwork(Base):

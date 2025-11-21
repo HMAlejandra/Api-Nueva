@@ -4,9 +4,9 @@ Router for artwork operations
 from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from app.database import get_db
-from app.schemas.artwork import ArtworkCreate, ArtworkResponse
-from app.services.artwork_service import ArtworkService
+from api.app.database import get_db
+from api.app.schemas.artwork import ArtworkCreate, ArtworkResponse
+from api.app.services.artwork_service import ArtworkService
 
 router = APIRouter(prefix="/api/artworks", tags=["artworks"])
 

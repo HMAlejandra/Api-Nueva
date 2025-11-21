@@ -3,9 +3,9 @@ Service layer for managing artworks
 """
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from app.models.artwork import Artwork
-from app.repositories.artwork_repository import ArtworkRepository
-from app.schemas.artwork import ArtworkCreate
+from api.app.models.artwork import Artwork
+from api.app.repositories.artwork_repository import ArtworkRepository
+from api.app.schemas.artwork import ArtworkCreate
 
 
 class ArtworkService:
