@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy main.py
 COPY main.py .
 
-# Copy the api directory contents to /app
-COPY api/ .
+# Copy the api directory to /app
+COPY api ./api
 
 # Expose port
 EXPOSE 8080
